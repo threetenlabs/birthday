@@ -68,8 +68,14 @@
 
             if (number === 9) {
                 window.open("https://youtu.be/3GwjfUFyY6M?feature=shared&t=17", "_blank");
+            } else if (infoText.textContent == "") {
+                infoText.textContent = "Alas! Incorrect, muggle.";
             } else {
                 infoText.textContent = "Alas! Incorrect, muggle.";
+                infoText.classList.add('flicker');
+                setTimeout(function () {
+                    infoText.classList.remove('flicker');
+                }, 500);
             }
         }
     </script>
