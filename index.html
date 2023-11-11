@@ -18,21 +18,15 @@
             color: #460a46;
         }
 
-        #numberInput {
-            width: 50px;
-            font-size: 20px;
-            text-align: center;
-            border: 2px solid #460a46;
-            border-radius: 5px;
-        }
-
         button {
             background-color: #460a46;
             color: white;
             border: none;
-            padding: 5px 10px;
+            padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 20px;
+            margin: 5px;
         }
 
         button:hover {
@@ -55,22 +49,29 @@
 <body>
     <div class="container">
         <h2>What is the answer to the final puzzle?</h2>
-        <input type="number" id="numberInput" min="1" max="9" />
-        <button id="submitButton">Submit</button>
+        <!-- Buttons for numbers 1 to 9 -->
+        <button onclick="checkNumber(1)">1</button>
+        <button onclick="checkNumber(2)">2</button>
+        <button onclick="checkNumber(3)">3</button>
+        <button onclick="checkNumber(4)">4</button>
+        <button onclick="checkNumber(5)">5</button>
+        <button onclick="checkNumber(6)">6</button>
+        <button onclick="checkNumber(7)">7</button>
+        <button onclick="checkNumber(8)">8</button>
+        <button onclick="checkNumber(9)">9</button>
         <div id="infoText"></div>
     </div>
 
     <script>
-        document.getElementById("submitButton").addEventListener("click", function () {
-            var enteredNumber = document.getElementById("numberInput").value;
+        function checkNumber(number) {
             var infoText = document.getElementById("infoText");
 
-            if (enteredNumber === '6') {
+            if (number === 6) {
                 window.open("https://youtu.be/3GwjfUFyY6M?feature=shared&t=17", "_blank");
             } else {
                 infoText.textContent = "Alas! Incorrect, muggle.";
             }
-        });
+        }
     </script>
 </body>
 
