@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Harry Potter Puzzle</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: 'Henny Penny', cursive;
+            background-color: #f0e6d6;
+            color: #1a001a;
+        }
+
+        h2 {
+            color: #460a46;
+        }
+
+        #numberInput {
+            width: 50px;
+            font-size: 20px;
+            text-align: center;
+            border: 2px solid #460a46;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #460a46;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5a0d5a;
+        }
+
+        #infoText {
+            color: red;
+            margin-top: 20px;
+        }
+
+        .container {
+            background-image: url('harry-potter-background.jpg');
+            background-size: cover;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>What is the answer to the final puzzle?</h2>
+        <input type="number" id="numberInput" min="1" max="9" />
+        <button id="submitButton">Submit</button>
+        <div id="infoText"></div>
+    </div>
+
+    <script>
+        document.getElementById("submitButton").addEventListener("click", function () {
+            var enteredNumber = document.getElementById("numberInput").value;
+            var infoText = document.getElementById("infoText");
+
+            if (enteredNumber === '6') {
+                window.open("https://youtu.be/3GwjfUFyY6M?feature=shared&t=17", "_blank");
+            } else {
+                infoText.textContent = "Alas! Incorrect, muggle.";
+            }
+        });
+    </script>
+</body>
+
+</html>
